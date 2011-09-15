@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import tutoringfx.LoginController?>
+
+<BorderPane fx:controller="tutoringfx.LoginController" id="Login" prefHeight="280.0" prefWidth="480.0"
+  xmlns:fx="http://javafx.com/fxml">
+    <top>
+        <StackPane>
+            <children>
+                <Label text="Duke's Tutoring JavaFX Client" />
+            </children>
+        </StackPane>
+    </top>
+    <center>
+        <GridPane alignment="top_center" hgap="8" vgap="8" >
+            <children>
+                <Label text="Email:" GridPane.columnIndex="0" GridPane.rowIndex="1" labelFor="$userId"/>
+                <TextField fx:id="userId" GridPane.columnIndex="1" GridPane.rowIndex="1" onAction="#processLogin"/>
+                
+                <Label text="Password:" GridPane.columnIndex="0" GridPane.rowIndex="2" labelFor="$password" />
+                <PasswordField fx:id="password" GridPane.columnIndex="1" GridPane.rowIndex="2" onAction="#processLogin"/>
+                
+                <Button text="login" defaultButton="true" fx:id="login" GridPane.columnIndex="1" GridPane.rowIndex="3" onAction="#processLogin"/>
+                <Label fx:id="errorMessage" textFill="RED" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            </children>
+        </GridPane>
+    </center>
+    <bottom>
+          
+    </bottom>
+    <styleClass>
+        <String fx:value="login" />
+    </styleClass>
+    <properties>
+        <elementLockSel>
+            <Boolean fx:value="true" />
+        </elementLockSel>
+    </properties>
+</BorderPane>
+

@@ -1,0 +1,66 @@
+.root {
+    -fx-font-size: 16pt;
+    -fx-font-family: "Helvetica";
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, lightslategrey 0%, black 100%);
+    -fx-text-fill: white;
+}
+
+.text-box {
+    -fx-background-color: lightslategrey;
+}
+
+.button {
+    -fx-text-fill: black;
+    -fx-border-color: lightslategrey;
+    -fx-border-radius: 5;
+}
+
+.button:hover {
+    -fx-effect: dropshadow( one-pass-box , black , 8 , 0.0 , 2 , 0 );
+}
+
+.login {
+    -fx-font-size: 1.2em;
+}
+.status {
+    -fx-font-size: 1.2em;
+}
+.status #message {
+    -fx-font-size: 1.2em;
+    -fx-font-weight: bold;
+}
+
+/* =============== STYLE ALL TABLES ================================================= */
+.table-view {
+    -fx-background-color: transparent;
+    -fx-background-insets: 0;
+    -fx-padding: 10;
+    -fx-alignment: center;
+}
+.table-view .column-header-background {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent transparent rgba(255,255,255,0.3) transparent;
+    -fx-border-width: 1;
+    -fx-background-insets: 0;
+    -fx-padding: 0 10 0 0;
+}
+.table-view .column-header, .table-view .filler {
+    -fx-border-color: transparent;
+}
+.table-view .column-header .label {
+    -fx-text-fill: #e1fdff;
+    -fx-font-weight: bold;
+}
+.table-view .table-cell {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-text-fill: white;
+    -fx-alignment: center;
+}
+.table-view  .table-row-cell:filled:selected:focused, .table-row-cell:filled:selected {
+    -fx-background-color: rgba(0,0,0,0.1);
+}
+
+.table-view .table-row-cell {
+    -fx-background-color: transparent;
+}

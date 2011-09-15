@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import tutoringfx.StatusController?>
+
+<BorderPane fx:controller="tutoringfx.StatusController" 
+    id="Status" 
+    xmlns:fx="http://javafx.com/fxml">
+    <top>
+        <GridPane alignment="center"
+                  style="-fx-padding: 20 10 0 0"
+                  hgap="8"
+                  vgap="8">
+            <children>
+                <Label fx:id="userLabel" 
+                       text="Name: "
+                       GridPane.columnIndex="0"
+                       GridPane.rowIndex="1"/>
+                <Label fx:id="userId" 
+                       GridPane.columnIndex="1"
+                       GridPane.rowIndex="1"/>
+                <Button fx:id="logoutButton"
+                        GridPane.columnIndex="2"
+                        GridPane.rowIndex="1"
+                        onAction="#logout" />
+            </children>
+        </GridPane>
+    </top>
+    <center>
+        <StackPane alignment="center">
+            <children>
+                <TableView fx:id="table" 
+                           editable="false"
+                           prefHeight="150">
+                    <columns>
+                        <TableColumn text="Student" minWidth="200">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="name" />
+                            </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn text="Status">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="statusLabel" />
+                            </cellValueFactory>
+                        </TableColumn>
+                    </columns>
+                </TableView>
+            </children>
+        </StackPane>
+    </center>
+    <bottom>
+        <GridPane alignment="center" hgap="8" vgap="8" style="-fx-padding: 0 0 40 0">
+            <children>
+                <Button text="refresh" 
+                        defaultButton="true" 
+                        GridPane.rowIndex="0" 
+                        GridPane.columnIndex="0" 
+                        onAction="#refresh" />
+            </children>
+        </GridPane>
+    </bottom>
+    <styleClass>
+        <String fx:value="status" />
+    </styleClass>
+</BorderPane>
